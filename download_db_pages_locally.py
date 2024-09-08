@@ -49,7 +49,6 @@ class DatabaseClient:
 
     def download_all_quickbase_pages(self):
         authentication_ticket = self.authenticate()
-        print("this is the ticket", authentication_ticket)
         # Iterate Through Each Page From Dictionary Above
         for page, id_value in qbDatabasePagesDictionary.items():
             print(f"Page: {page}, ID: {id_value}")
