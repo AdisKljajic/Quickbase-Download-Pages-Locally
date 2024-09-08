@@ -22,7 +22,7 @@ qbHours = authentication.QB_HOURS
 qbBaseURL = authentication.QB_BASE_URL
 qbApplicationDBID = authentication.QB_APPLICATION_DBID
 
-qbDatabasePagesLibrary = {
+qbDatabasePagesDictionary = {
     "index.html": 2,
     "index.bundle.js": 3,
 }
@@ -51,7 +51,7 @@ class DatabaseClient:
         authentication_ticket = self.authenticate()
         print("this is the ticket", authentication_ticket)
         # Iterate Through Each Page From Dictionary Above
-        for page, id_value in qbDatabasePagesLibrary.items():
+        for page, id_value in qbDatabasePagesDictionary.items():
             print(f"Page: {page}, ID: {id_value}")
             # Download Each Page Individually
             dbPageUrl = f"{qbBaseURL}/db/{qbApplicationDBID}?a=API_GetDBPage&ticket={authentication_ticket}"
